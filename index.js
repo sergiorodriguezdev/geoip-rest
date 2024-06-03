@@ -25,14 +25,14 @@ const API_URL = `http://api.ipstack.com/${IP_ADDRESS}?access_key=${process.env.A
 // Fetch data
 fetchData(API_URL);
 
-// Function definition
+// Function definition to request data from IPStack API.
 async function fetchData(url) {
   try {
     const response = await fetch(url);  // Send request
     const data = await response.json(); // Get JSON payload
 
     // Check if request failed and throw exception
-    if (!data.success && data.error) {
+    if (!data.success || data.error) {
         throw data.error
     } else {
         // Output latitude and longitude values separated by a comma
