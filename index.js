@@ -32,7 +32,7 @@ async function fetchData(url) {
     const data = await response.json(); // Get JSON payload
 
     // Check if request failed and throw exception
-    if (!data.success || data.error) {
+    if (!data.success && data.error) {
         throw data.error
     } else {
         // Output latitude and longitude values separated by a comma
