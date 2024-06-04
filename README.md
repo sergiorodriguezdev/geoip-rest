@@ -2,7 +2,7 @@
 
 ## Description
 
-The GeoIP CLI tool will take a public IP address as input and it will output the latitude and longitude values in a format that is easy to consume by another tool. You may use this tool to find the coordinates of requests coming into your network and log these values in a file or a database for tracking or data visualization purposes.
+The GeoIP CLI tool takes a public IP address as input and outputs the latitude and longitude values in a format that is easy to consume by another tool. You may use this tool to find the coordinates of requests coming into your network and log these values in a file or a database for tracking or data visualization purposes.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ Then, create a copy of the `.env.EXAMPLE` file and name the new copy `.env` usin
 cp .env.EXAMPLE .env
 ```
 
-Open the `.env` file in a text editor, enter the API Key you retrieved from your [IPStack dashboard](https://ipstack.com/dashboard), and save your changes. The resulting file should look like this:
+Open the `.env` file in a text editor, enter the API Key you retrieved from your [IPStack Dashboard](https://ipstack.com/dashboard), and save your changes. The resulting file should look like this:
 
 ```
 API_KEY=abcdefghij0123456789etc

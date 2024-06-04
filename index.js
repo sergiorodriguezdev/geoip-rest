@@ -3,14 +3,14 @@ require("dotenv").config();
 
 // Check if API_KEY environment variable exists
 if (!process.env.API_KEY) {
-  console.error("API Key missing. Please update your .env file.");
+  console.error("API Key is missing. Please update your .env file or set the API_KEY environment variable in your system.");
   process.exit(1);
 }
 
 // Check if IP Address CLI argument is missing
 if (process.argv.length === 2) {
   console.error(
-    "IP Address value missing. Please enter an IP Address as an argument."
+    "IP Address value is missing. Please enter an IP Address as an argument."
   );
   process.exit(1);
 }
