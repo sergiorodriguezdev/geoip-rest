@@ -29,6 +29,15 @@ fetchData(API_URL);
 async function fetchData(url) {
   try {
     const response = await fetch(url);  // Send request
+
+    // Check if request failed and throw exception
+    if (!response.ok) {
+      throw {
+        status: response.status,
+        statusText: response.statusText,
+      }
+    }
+
     const data = await response.json(); // Get JSON payload
 
     // Check if request failed and throw exception
