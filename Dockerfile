@@ -19,7 +19,7 @@ RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=cache,target=/root/.npm \
     npm ci --omit=dev
 
-# Define which use to run as, this is a non-root user
+# Define which user to run as, this is a non-root user
 USER node
 
 # Define my entry point command which invokes my code
