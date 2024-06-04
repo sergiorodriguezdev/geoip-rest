@@ -6,7 +6,7 @@ The GeoIP CLI tool takes a public IP address as input and outputs the latitude a
 
 ## Prerequisites
 
-The GeoIP CLI tool leverages the IPStack API so you will need to sign up for a free account and use the API Key provided. [Click here](https://ipstack.com/signup/free) to get started and make a note of the API Key.
+The GeoIP CLI tool leverages the IPStack API so you will need to sign up for a free account and use the API Key provided. [Click here](https://ipstack.com/signup/free) to get started and make a note of the API Key. If you require HTTPS encryption, sign up for a premium subscription and update the API_URL in the `index.js` file, line 23, to use `https://`.
 
 Additionally, make sure you have NodeJS version 18 or newer installed as well as NPM. Follow [these instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to get started.
 
