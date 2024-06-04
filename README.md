@@ -32,7 +32,11 @@ Open the `.env` file in a text editor, enter the API Key you retrieved from your
 API_KEY=abcdefghij0123456789etc
 ```
 
-NOTE: The `.env` file is not provided by default and it is added as an entry in the `.gitignore` file to ensure this private key is not uploaded to a GitHub repo by accident. Alternatively, you can set the `API_KEY` environment variable in your system; steps to do this are outside of the scope of this README.
+Please note the `.env` file is not provided by default and it is added as an entry in the `.gitignore` file to ensure this private key is not uploaded to a GitHub repo by accident. Alternatively, you can set the `API_KEY` environment variable in your system by executing the following command where `<API_KEY>` is the key you retrieved from your IPStack Dashboard (above):
+
+```
+export API_KEY=<API_KEY>
+```
 
 ### Running the Tool
 
@@ -47,4 +51,24 @@ The output of the tool separates the latitutde and longitude with a comma, it lo
 
 ```
 <LATITUDE>,<LONGITUDE>
+```
+
+## Docker Container
+
+If you prefer to use a Docker container to run the tool and you have the Docker CLI installed, then start by entering the API Key from your  [IPStack Dashboard](https://ipstack.com/dashboard) in the `Dockerfile` file, line 7, and save your changes. The resulting file should like this:
+
+```
+ENV API_KEY=abcdefghij0123456789etc
+```
+
+Then, build your image by executing the following command:
+
+```
+docker build -t geoip-rest .
+```
+
+Finally, run the tool by executing the following command - replace `<IP_ADDRESS>` with the actual public IP Address:
+
+```
+docker run geoip-rest <IP_ADDRESS>
 ```
